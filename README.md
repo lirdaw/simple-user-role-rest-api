@@ -10,8 +10,8 @@
 This project is a simple example of the REST API for a user-role relationship.
 
 After successful setup you will have access for beautiful home page at http://localhost:8080/ which describes all endpoints which this project has to offer.
-![alt text](https://raw.githubusercontent.com/lirdaw/simple-user-role-rest-api/master/readme_img001.png "Home Page")
 
+![alt text](https://raw.githubusercontent.com/lirdaw/simple-user-role-rest-api/master/readme_img001.png "Home Page")
 
 ## Technologies
 * Spring Boot (2.2.4 released)
