@@ -27,11 +27,10 @@ public class UserServiceImpl implements com.lirdaw.simpleuserrolerestapi.service
         Optional<User> result = userRepository.findById(idUser);
 
         User user;
-
         if (result.isPresent()) {
             user = result.get();
         } else {
-            throw new RuntimeException("There is no user with idUser: " + idUser);
+            throw new RuntimeException("User with given id (" + idUser + ") not found.");
         }
 
         return user;
