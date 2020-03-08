@@ -1,5 +1,17 @@
 .header1 {
     font-style: italic;
+    font-size: 20px;
     color: green;
     text-align: center;
+}
+
+.header2 {
+    font-style: italic;
+    font-size: 15px;
+    color: darkgreen;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px dashed;
 }

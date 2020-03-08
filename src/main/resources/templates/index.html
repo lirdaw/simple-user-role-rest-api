@@ -5,11 +5,128 @@
 <head>
     <meta charset="utf-8">
     <title>Simple user-role rest API</title>
-    <link href="../static/css/style.css" rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
 </head>
 
 <body>
 <div class="header1">Simple user-role rest API</div>
 <hr/>
+<p>This project offers example endpoints for both: user and his roles. There is no special validation for any kind of
+    "user creativity". Just simple REST API with which you can start.</p>
+
+<table>
+    <tr>
+        <th>HTTP request methods</th>
+        <th>Address</th>
+        <th>Description</th>
+        <th>Example JSON request</th>
+    </tr>
+    <tr>
+        <td th:class="header2" th:colspan="4"><br/><br/>User</td>
+    </tr>
+    <tr>
+        <td>GET</td>
+        <td>localhost:8080/api/users/</td>
+        <td>Retrieves all users data from database</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>GET</td>
+        <td>localhost:8080/api/users/1</td>
+        <td>Retrieves data of user with id: 1 from database</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>localhost:8080/api/users/</td>
+        <td>Adds user to database</td>
+        <td>
+            {
+            "idUser": 0,
+            "login": "FreshUser",
+            "password": "FreshUser",
+            "email": "freshuser@api.com",
+            "firstName": "FreshUser",
+            "lastName": "FreshUser",
+            "gender": "M",
+            "roles": [
+            {
+            "idRole": 3
+            }
+            ]
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>PUT</td>
+        <td>localhost:8080/api/users/</td>
+        <td>Updates user in the database</td>
+        <td>
+            {
+            "idUser": 6,
+            "login": "FreshUser",
+            "password": "FreshUser",
+            "email": "freshuser@api.com",
+            "firstName": "FreshUser",
+            "lastName": "FreshUser",
+            "gender": "M",
+            "roles": [
+            {
+            "idRole": 1
+            }
+            ]
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>DELETE</td>
+        <td>localhost:8080/api/users/4</td>
+        <td>Deletes user with id: 4 from database</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td th:class="header2" th:colspan="4"><br/><br/>Role</td>
+    </tr>
+    <tr>
+        <td>GET</td>
+        <td>localhost:8080/api/roles/</td>
+        <td>Retrieves all roles data from database</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>GET</td>
+        <td>localhost:8080/api/roles/1</td>
+        <td>Retrieves data of role with id: 1 from database</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>localhost:8080/api/roles/</td>
+        <td>Adds role to database</td>
+        <td>
+            {
+            "idRole": 0,
+            "name": "FreshUseeeeer"
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>PUT</td>
+        <td>localhost:8080/api/roles/</td>
+        <td>Updates role in the database</td>
+        <td>
+            {
+            "idRole": 4,
+            "name": "Fresh User"
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>DELETE</td>
+        <td>localhost:8080/api/roles/4</td>
+        <td>Deletes role with id: 4 from database</td>
+        <td></td>
+    </tr>
+</table>
 </body>
 </html>
